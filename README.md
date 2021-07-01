@@ -6,8 +6,8 @@ As we switched to a community managed plugin we upgraded the version of the Mapb
 
 Android
 
-On android the plugin default to 8.x. You can change it by creating a before-plugins.gradle in App_Resources/Android with (showing current versions):
-
+On android the plugin default to 8.x. You can change it by creating a ``before-plugins.gradle`` in ``App_Resources/Android`` with (showing current versions):
+```
 ext {
     okHttpVersion = "3.12.10"
     def mapboxVersion =  "8.6.6"
@@ -16,10 +16,10 @@ ext {
     def mapboxAnnotationPluginVersion =  "0.9.0"
     def mapboxGesturesVersion =  "0.7.0"
 }
+```
+On iOS we dont force anything so it will get the latest one. If you want to change it create a ``Podfile ``in ``App_Resources/iOS`` with (see demo app):
 
-On iOS we dont force anything so it will get the latest one. If you want to change it create a Podfile in App_Resources/iOS with (see demo app):
-
-pod 'Mapbox-iOS-SDK', '~> 5.1.1'
+```pod 'Mapbox-iOS-SDK', '~> 5.1.1'```
 
 Before you begin - Prerequisites
 
@@ -28,4 +28,4 @@ You either need your own tile server such as the one provided by openmaptiles.or
 You will also need to set up your development environment. Please refer to the NativeScript documentation.
 Installation
 
-$ ns plugin install @nativescript-community/ui-mapbox
+```$ ns plugin install @nativescript-community/ui-mapbox```
