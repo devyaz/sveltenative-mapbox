@@ -1,10 +1,10 @@
-<page on:navigatedTo={onNavigatingTo}>
-<actionBar title="                          FINDR" class="red" />
+<page on:navigatedTo={onNavigatingTo}><!-- page binding the S + {N} way-->
+<actionBar title="                          Svelte Mapbox" class="red" /><!-- colours in the app.css file just type the colour name-->
   <stackLayout>
 
     <contentView id="anim" >
       <mapBox
-          accessToken="pk.eyJ1IjoibWFydGlubXRhd2FsaSIsImEiOiJjajViaG9sYXkyYzZ0MnFvYTdhbnI2amZ2In0.FkidTFDcehYOZc_DPX-BGw"
+          accessToken="your mapbox token here"
           mapStyle="traffic_night"
           zoomLevel="12"
           showUserLocation="true"
@@ -16,27 +16,18 @@
 </page>
 
 <script lang="typescript">
-//import { onNavigatingTo } from '../controllers/page.ts'
 import { navigate } from 'svelte-native'
 import { onMount } from "svelte"
 import { NativeElementNode } from 'svelte-native/dom';
 import { Page ,Enums } from '@nativescript/core';
 import { model}  from "../controllers/view";
 let page: NativeElementNode<Page>
-//import{TimelineLite , Ease} from 'greensock';
-//import{ Mapbox}  from "@nativescript-community/ui-mapbox";
 import { cubicOut } from 'svelte/easing';
- 
 
-  
-  //  var webViewInterfaceModule = require('nativescript-webview-interface2');
-
-  //let page: NativeElementNode<Page>
-  //bind: page
-  function onNavigatingTo(args ) {
+  function onNavigatingTo(args ) { //to get the page object using {N} binding after i failed to use Svelte
     const page = args.object;
-     model.set("page" ,page)
-    let  an= page.getViewById('anim')
+     model.set("page" ,page) //storing the page object in an Observable but not used for now
+    let  an= page.getViewById('anim') //the ContentView holding the map to animate it now commented out below
    /*  setTimeout(() => {
       an.animate({
               translate: { x: 0, y: 100 },
@@ -47,14 +38,14 @@ import { cubicOut } from 'svelte/easing';
         })
       
     }, 2000); */
-    //.set("state", "collapse");
+
     page.bindingContext = model;
 }
 
  exports.onNavigatingTo = onNavigatingTo;
  
  onMount(() => {
-   //page.nativeElement.getViewById('anim')
+   //page.nativeElement.getViewById('anim')//
 })
  
   
@@ -75,22 +66,22 @@ args.map.addMarkers([
     }]);
 
 
-    args.map.setOnMapClickListener((point: LatLng) => {
+    args.map.setOnMapClickListener((point: LatLng) => { //i used this to get  gps coordinates on tap
             console.log("Map clicked at latitude: " + point.lat + ", longitude: " + point.lng);
-           return true;
+           return true; //if you dont add this line app will crush because it returns NULL
         });
 
   }
  
 
   exports.onMapReady = onMapReady;
-
+/*
 function goTo(p) {
     navigate({
       page: p ,
       //props: { message: "Hello from master" }
     })
-  }
+  }*/
 </script>
 
 <style>
