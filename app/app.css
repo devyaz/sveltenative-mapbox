@@ -1,0 +1,270 @@
+/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme.
+The imported CSS rules must precede all other types of rules.
+*/
+/*@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';*/
+@import './font-awesome.css';
+@import './ionicons.css';
+.fab-button {
+    height: 80;
+    width: 80;
+    border-radius:20 ;
+    margin: 15;
+    /*background-color:#e91e63;*/
+    horizontal-align: right;
+    vertical-align: bottom;
+
+}
+.fab-body{
+    height: 50;
+    opacity: 0;
+    background-color:rgba(202, 53, 27, 0.911);
+}
+.speed-button {
+    height: 50;
+    width:50;
+    margin: 22;
+    background-color:rgba(20, 18, 18, 0.911);
+    color: rgb(255, 254, 254);
+    opacity: 0;
+    border-radius: 20;
+    horizontal-align: right;
+    vertical-align: bottom;
+    text-align: center;
+    font-size: 36;
+}
+.btn {
+    font-size: 18;
+}
+.tab-content {
+  color: #808080;
+  padding: 10;
+}
+
+.title {
+  font-size: 20;
+  margin: 0 0 10 0;
+  color: #3c3c3c;
+}
+
+label {
+  font-size: 16;
+}
+
+
+.border {
+    border-width: 4;
+    border-color: #68f5a7f5;
+    border-radius: 8;
+}
+
+.button {
+  color: #FFFFFF;
+  height: auto;
+}
+
+.button-offline {
+  background-color: #A0A0A0;
+}
+
+.button-permissions {
+  background-color: #808080;
+}
+.fa {
+  font-family: "FontAwesome";
+}
+.ion{
+  font-family: "ionicons";
+}
+.owi{
+  font-family: "OpenWeatherIcons";
+}
+.owi-lg {
+    vertical-align: -15%;
+    line-height: 0.75em;
+    font-size: 1.33333333em;
+}
+
+.owi-2x {
+    font-size: 2em;
+}
+
+.owi-3x {
+    font-size: 3em;
+}
+
+.owi-4x {
+    font-size: 4em;
+}
+
+.owi-5x {
+    font-size: 5em;
+}
+
+.owi-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+/* Chat styling */
+.msg {
+   font-size: 14px;
+   margin-top: 5px;
+   margin-bottom: 20;
+}
+
+.me .msg_text {
+   background-color: #30A9FF;
+   color: white;
+   padding: 8px;
+   margin-right: 40px;
+   border-top-left-radius: 15;
+   border-bottom-left-radius: 15;
+   border-bottom-right-radius: 15;
+}
+
+.them .msg_text {
+   background-color: #e0e0e0;
+   color: #333;
+   padding: 7px;
+   border-top-right-radius: 15;
+   border-bottom-left-radius: 15;
+   border-bottom-right-radius: 15;
+   margin-right: 40px;
+}
+
+.authorimg {
+   margin: 0px 5px 5px 5px;
+   width: 50;
+   height: 30;
+   border-radius: 15;
+}
+
+.them .msg_timestamp {
+   color: #1797B3;
+
+   margin-left: 4px;
+}
+
+.me .msg_timestamp {
+   color: #1797B3;
+
+   font-weight: 80;
+   margin-right: 4px;
+   text-align: left;
+}
+.compassBack {
+  top: 6;
+    margin-top: 2;
+    margin-right: -2;
+    width: 50;
+    height: 50;
+    border-radius: 50;
+}
+.bottomScroll {
+  bottom: 6;
+    margin-top: 2;
+    margin-right: -2;
+
+    border-radius: 50;
+}
+.scroll-menu {
+bottom: 4;
+height: 200;
+}
+
+.scroll-pane {
+background-color: #000;
+width: auto;
+height: auto;
+margin: 4;
+border-radius: 6;
+}
+.nsChatView-view .nsChatView-sendMessageArea Button {
+    background-color: transparent;
+    margin: 0;
+}
+
+.nsChatView-view .nsChatView-messageList .nsChatView-item-left .nsChatView-messageArea .nsChatView-content,
+.nsChatView-view .nsChatView-messageList .nsChatView-item-right .nsChatView-messageArea .nsChatView-content {
+    margin: 12,16,12,16;
+}
+.nsChatView-view .nsChatView-messageField {
+    font-size: 14;
+}
+.message{
+   background-color: transparent;
+   border-radius:16px;
+}
+.bottom{
+
+  vertical-align: bottom;
+}
+.card{box-shadow:0 8px 16px 0 ;margin: 5;background-color: transparent}
+.card-padding{box-shadow:0 8px 16px 0 ;margin: 10;background-color: transparent}
+.padding{padding-top:8px; padding-bottom:50px}
+.blue{color:#fff;background-color:#2196F3}
+.red{color:#fff;background-color:#f44336}
+.grey{color:#000;background-color:#9e9e9e}
+.gray{color:#000;background-color:#9e9e9e}
+.light-grey{color:#000;background-color:#989696}
+.light-gray{color:#000;background-color:#989696}
+.dark-grey{color: black;background-color: #424141}
+.dark-gray{color: black;background-color: #424141}
+.round{border-radius:8px}
+.round-large{border-radius:16px}
+.green{color:#fff;background-color:#4CAF50}
+.white{color:#000;background-color:#fff}
+.yellow{color:#000;background-color:#ffeb3b}
+.sand{color:#000;background-color:#fdf5e6}
+.center{text-align:center}
+.circle{border-radius:50%}
+.left{text-align:left}
+.right{text-align:right}
+.transparent{background-color:transparent}
+.black{color: white; background-color: black}
+.amber{color:#000;background-color:#ffc107}
+.aqua{color:#000;background-color:#00ffff}
+.light-blue{color:#000;background-color:#87CEEB}
+.brown{color:#fff;background-color:#795548}
+.cyan{color:#000;background-color:#00bcd4}
+.blue-grey{color:#fff;background-color:#607d8b}
+.light-green{color:#000;background-color:#8bc34a}
+.indigo{color:#fff;background-color:#3f51b5}
+.khaki{color:#000;background-color:#f0e68c}
+.lime{color:#000;background-color:#cddc39}
+.orange{color:#000;background-color:#ff9800}
+.deep-orange{color:#fff;background-color:#ff5722}
+.pink{color:#fff;background-color:#e91e63}
+.purple{color:#fff;background-color:#9c27b0}
+.deep-purple{color:#fff;background-color:#673ab7}
+.teal{color:#fff;background-color:#009688}
+.opacity{background-color: rgba(46, 42, 42, 0.548)}
+.pale-red{color:#000;background-color:#ffdddd}
+.pale-green{color:#000;background-color:#ddffdd}
+.pale-yellow{color:#000;background-color:#ffffcc}
+.pale-blue{color:#000;background-color:#ddffff}
+.zoom {animation:animatezoom 0.8s}
+.zoomOut {animation:animatezoomOut 0.8s}
+.tiny{font-size:10px!}
+.small{font-size:12px}
+.medium{font-size:15px}
+.large{font-size:18px}
+.xlarge{font-size:24px}
+.xxlarge{font-size:36px}
+.xxxlarge{font-size:48px}
+.jumbo{font-size:64px}
+.card,.card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.card-4{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+@keyframes animatezoomOut{from{transform:scale(1)} to{transform:scale(0)}}
+.animate-bottom{position:relative;animation:animatebottom 0.8s}
+@keyframes animatebottom{from{transform:  translateY(330) ;opacity:0} to{transform: translateY(0);opacity:1}}

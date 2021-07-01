@@ -1,0 +1,12 @@
+{
+    "xml.fileAssociations": [
+        {
+            "systemId": "http://schemas.nativescript.org/tns.xsd",
+            "pattern": "schema/tns.xsd"
+        },
+        {
+            "systemId": "/devyaz/sveltenative-mapbox/schema/tns.xsd",
+            "pattern": "**/**/*.xml"
+        }
+    ]
+}
