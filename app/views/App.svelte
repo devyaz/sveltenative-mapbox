@@ -45,8 +45,6 @@ import { cubicOut } from 'svelte/easing';
  exports.onNavigatingTo = onNavigatingTo;
  
  onMount(() => {
-   let view: model.page
-
    //page.nativeElement.getViewById('anim')//
 })
  
